@@ -11,7 +11,7 @@ pip install discord.py python-dotenv
 Use ```deactivate``` to go out of the env.
 
 ## Utilisation
-Actualy you have to use '!' before a command to use it.
+Currently, you need to use '!' before a command to execute it.
 
 ## Function available
 

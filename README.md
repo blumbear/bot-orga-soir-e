@@ -16,7 +16,7 @@ Use ```deactivate``` to go out of the env.
 As its name suggests, this function clears the channel it is in.
 
 ### delete_category
-Deletes the specified category and all of its channels. ⚠️ This operation is permanent.
+Deletes the specified category and all of its channels.\ ⚠️ This operation is permanent.
 
 ### create_party
 It creates a category from the template specified in the code (via its ID), copying all included channels and permissions.

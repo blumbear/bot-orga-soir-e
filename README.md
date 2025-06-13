@@ -19,8 +19,7 @@ Utilisation: ```clear_channel```
 ### delete_category
 Deletes the specified category and all of its channels.  
 ⚠️ This operation is permanent.  
-Note: This function do weird stuff when the category's name contain some space test
-
+Note: This function do weird stuff when the category's name contain some space  
 Utilisation: ```delete_category "category's name"```
 
 ### create_party

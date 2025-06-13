@@ -19,7 +19,7 @@ Utilisation: ```clear_channel```
 ### delete_category
 Deletes the specified category and all of its channels.  
 ⚠️ This operation is permanent.  
-Utilisation: ```delete_category test```
+Utilisation: ```delete_category "category's name"```
 
 ### create_party
 It creates a category from the template specified in the code (via its ID), copying all included channels and permissions.

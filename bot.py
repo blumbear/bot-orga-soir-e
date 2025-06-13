@@ -151,7 +151,7 @@ async def create_party(ctx, new_party:str, announce_message:str):
 	# creation of every channel of the new category
 	for ch in template.channels:
 		if isinstance(ch, discord.TextChannel):
-			await ctx.guild.create_text_channel(
+			new_channel = await ctx.guild.create_text_channel(
 				name=ch.name,
 				category=new_category,
 				overwrites=overwrites,
@@ -161,7 +161,7 @@ async def create_party(ctx, new_party:str, announce_message:str):
 				slowmode_delay=ch.slowmode_delay
 			)
 		elif isinstance(ch, discord.VoiceChannel):
-			await ctx.guild.create_voice_channel(
+			new_channel = await ctx.guild.create_voice_channel(
 				name=ch.name,
 				category=new_category,
 				overwrites=overwrites,
@@ -178,7 +178,7 @@ async def create_party(ctx, new_party:str, announce_message:str):
 					moderated=tag.moderated
 				) for tag in ch.available_tags
 			]
-			await ctx.guild.create_forum(
+			new_channel = await ctx.guild.create_forum(
 				name=ch.name,
 				category=new_category,
 				available_tags=tags,
@@ -186,9 +186,9 @@ async def create_party(ctx, new_party:str, announce_message:str):
 				default_layout=ch.default_layout
 			)
 		if (ch.name == "inventaire"):
-			await ctx.send("test")
+			await new_channel.send(stuffNewParty_prompt)
 
-	newParty_prompt:str = "🎉🎉 Nouvelle Soirée 🎉🎉 :\n👽 Rôle :\n" + role.name + "\n" + announce_message
+	newParty_prompt:str = "🎉🎉 Nouvelle Soirée 🎉🎉 :\n👽 Rôle : " + role.name + "\n" + announce_message
 	await bot.get_channel(ANNOUNCE_CHANNEL).send(newParty_prompt)
 	last_msg_anc = [msg async for msg in bot.get_channel(ANNOUNCE_CHANNEL).history(limit=1)][0]
 	await last_msg_anc.add_reaction(EMOJI)

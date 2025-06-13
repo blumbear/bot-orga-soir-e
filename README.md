@@ -8,7 +8,7 @@ python3 -m venv bot_env
 source bot_env/bin/activate.
 pip install discord.py python-dotenv
 ```
-Use ```bash deactivate``` to go out of the env.
+Use ```deactivate``` to go out of the env.
 
 ## Function available
 

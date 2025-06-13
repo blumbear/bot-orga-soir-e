@@ -1,4 +1,4 @@
-#!/home/tom/Depotgit/bot_beber_avouv_soirée/bot_env/bin/python3
+#!/home/tom/Depotgit/bot-argo-soir-e/bot_env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

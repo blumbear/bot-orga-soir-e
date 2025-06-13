@@ -13,15 +13,15 @@ Use ```deactivate``` to go out of the env.
 ## Function available
 
 ### clear_channel
-As its name suggests, this function clears the channel it is in.
+As its name suggests, this function clears the channel it is in.  
 Utilisation: ```clear_channel```
 
 ### delete_category
 Deletes the specified category and all of its channels.  
-⚠️ This operation is permanent.
+⚠️ This operation is permanent.  
 Utilisation: ```delete_category test```
 
 ### create_party
 It creates a category from the template specified in the code (via its ID), copying all included channels and permissions.
-Note: This function currently lacks proper safeguards, and some features were intentionally left out for simplicity. Further updates are expected.
+Note: This function currently lacks proper safeguards, and some features were intentionally left out for simplicity. Further updates are expected.  
 Utilisation: ```create_party "party's name" "party's description"```
